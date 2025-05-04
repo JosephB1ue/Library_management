@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inputbox {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 500px;
+        }
+        .inputbox input {
+            width: 100%;
+            font-size: 16px;
+            padding: 5px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/bookdetails">Available books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form method="post" >
+
+            {% csrf_token %}
+            
+            <h1 style="position: relative; left: 26%; top: 5px;">Add a New Book</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <label>Book Name</label>
+                <input type="text" placeholder="bookname" name="title" required>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label>Author</label>
+                <input type="text" placeholder="author's name" name="authorname" required>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label>Year</label>
+                <input type="number" placeholder="year of publication" name="year" required>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label>Genre</label>
+                <input type="text" placeholder="genre" name="genre" required>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <label>Contact</label>
+                <input type="number" placeholder="contact" name="contact" required>
+            </div>
+            <div style="position: relative; left: 42%;">
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+            <!-- Add more books as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

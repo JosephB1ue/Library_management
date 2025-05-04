@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        body {
+            background-image: url("{% static 'images/library.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+            height: 100vh;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            color: black;
+        }
+
+    </style>
+</head>
+<body >
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">Add new Book</a></li>
+                <li><a href="/bookdetails">Available Books</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section style="display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative; top: 230px; ">
+            <h1 style="font-size: xx-large; color: black;">Welcome to Our Library!</h1>
+            <p style="font-size: large; color: black;">Explore our vast collection of books and manage your library needs.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Library Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
